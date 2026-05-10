@@ -55,10 +55,10 @@
       "Bash(sh -c:*)",
       "Bash(bash -c:*)",
       "Bash(zsh -c:*)",
-      "Bash(curl:* | sh)",
-      "Bash(curl:* | bash)",
-      "Bash(wget:* | sh)",
-      "Bash(wget:* | bash)"
+      "Bash(curl * | sh)",
+      "Bash(curl * | bash)",
+      "Bash(wget * | sh)",
+      "Bash(wget * | bash)"
     ]
   },
   "model": "opus[1m]",
