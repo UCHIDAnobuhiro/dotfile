@@ -31,4 +31,12 @@ echo "Installing dotfiles from $DOTFILE_DIR"
 link "$DOTFILE_DIR/claude/settings.json" "$HOME/.claude/settings.json"
 link "$DOTFILE_DIR/zellij/config.kdl"    "$HOME/.config/zellij/config.kdl"
 
+if [ -d "$DOTFILE_DIR/claude/skills" ]; then
+    for skill in "$DOTFILE_DIR/claude/skills"/*/; do
+        [ -d "$skill" ] || continue
+        name="$(basename "$skill")"
+        link "${skill%/}" "$HOME/.claude/skills/$name"
+    done
+fi
+
 echo "Done."
